@@ -14,9 +14,30 @@ import (
 
 func init() {
 	gob.Register(map[string]any{})
+	gob.Register(map[int64]any{})
+	gob.Register(map[int32]any{})
+	gob.Register(map[int]any{})
+
+	gob.Register(map[uint64]any{})
+	gob.Register(map[uint32]any{})
+	gob.Register(map[uint]any{})
+
+	gob.Register(map[float32]any{})
+	gob.Register(map[float64]any{})
+
 	gob.Register([]any{})
 	gob.Register([]map[string]any{})
-	gob.Register([]string{})
+	gob.Register([]map[int64]any{})
+	gob.Register([]map[int32]any{})
+	gob.Register([]map[int]any{})
+
+	gob.Register([]map[uint64]any{})
+	gob.Register([]map[uint32]any{})
+	gob.Register([]map[uint]any{})
+
+	gob.Register([]map[float32]any{})
+	gob.Register([]map[float64]any{})
+
 }
 
 func DerivationKeyV1(keysting string) []byte {
